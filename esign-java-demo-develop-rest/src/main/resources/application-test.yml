@@ -1,0 +1,11 @@
+server:
+  port: 3030
+  tomcat:
+    max-connections: 1000
+    max-threads: 50
+    min-spare-threads: 1
+  connection-timeout: 10000
+
+logger:
+  request:
+    enabled: true

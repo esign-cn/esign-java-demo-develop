@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>悟空API-演示</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="js/jconfirm/jquery-confirm.min.css">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+body{
+    background-color: #fff;
+}
+.error-page {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.error-body {
+    padding-top: 5%;
+}
+.error-body h1 {
+    font-size: 210px;
+    font-weight: 700;
+    text-shadow: 4px 4px 0 #f5f6fa, 6px 6px 0 #33cabb;
+    line-height: 210px;
+    color: #CC3333;
+	
+}
+.error-body h4 {
+    margin: 30px 0px;
+}
+</style>
+</head>
+  
+<body>
+<section class="error-page">
+  <div class="error-box">
+    <div class="error-body text-center">
+	<img alt="esign" src="images/success.png" width="480" height="195">
+	<h1></h1>
+      <h4></h4>
+	<a id="doSign" href="#" target="_blank" class="btn btn-danger ">个人签署</a>
+        <a id="doOrganizationSign" target="_blank" href="#" class="btn btn-danger ">企业签署</a>
+	<a href="person_one.html" class="btn btn-danger ">返回首页</a>
+    </div>
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(
+    function(){	
+	var signUrl = localStorage.signUrl;
+	var organizationSignUrl = localStorage.organizationSignUrl;
+	$("#doSign").attr("href",signUrl);
+	$("#doOrganizationSign").attr("href",organizationSignUrl);
+});
+</script>
+</body>
+</html>

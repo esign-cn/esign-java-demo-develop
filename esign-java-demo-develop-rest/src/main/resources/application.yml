@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: test
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+  application:
+    name: demo-sale
+
+server:
+  port: 3030
+  context-path: /
